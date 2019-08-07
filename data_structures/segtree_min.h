@@ -26,7 +26,8 @@ class SegmentTreeMin {
             if (add_data[v] != T{}) {
                 tree_data[v << 1] += add_data[v];
                 tree_data[(v << 1) | 1] += add_data[v];
-                add_data[v << 1] = add_data[(v << 1) | 1] = add_data[v];
+                add_data[v << 1] += add_data[v];
+                add_data[(v << 1) | 1] += add_data[v];
                 add_data[v] = T{};
             }
         }
