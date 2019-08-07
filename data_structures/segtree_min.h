@@ -53,8 +53,8 @@ class SegmentTreeMin {
         UpdateRange(1, 0, n - 1, l, r, new_val);
     }
 
-    inline void Update(int ind, T add_val) {
-        UpdateRange(1, 0, n - 1, ind, ind, add_val);
+    inline void Update(int ind, T new_val) {
+        UpdateRange(1, 0, n - 1, ind, ind, new_val);
     }
 
     T AddRange(int v, int tl, int tr, int l, int r, T add_val) {
